@@ -4,6 +4,7 @@
 #include "TString.h"
 #include <iostream>
 #include <vector>
+#include "plotting.h"
 
 
 /*
@@ -156,8 +157,8 @@ void bastelplot() {
   //std::cin >> binwidth;
   //std::cout << "Wie viele bins?" << endl;
   //std::cin >> numbin;
-    plotVariable("designGT_vs_realigned.Comparison_commonTracker_autoRange.root", varx, vary, 20);
-   
+    Plotting* plotObject = new Plotting("designGT_vs_realigned.Comparison_commonTracker_autoRange.root", varx, vary, 20);
+    
   
   
   
@@ -165,6 +166,7 @@ void bastelplot() {
   
 
 }
+
 
 
 
