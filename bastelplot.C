@@ -120,7 +120,6 @@ void plotVariable(const TString& fileName, const TString& variablex, const TStri
 }
 
 
-
 // Untersucht, ob plotvariablen gültig sind, also tatsächlich gültige größen
 bool checkd(const TString& zeug){
     if(zeug == "dr") return true;
@@ -135,46 +134,9 @@ bool check(const  TString& zeug){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void bastelplot() {
   
-  
-  
-    // TFile f("designGT_vs_realigned.Comparison_commonTracker_autoRange.root","READ");
-  
-  
-    
-  
-    /*
-  
-    tree->SetBranchAddress("level",&level);
-    tree->SetBranchAddress("sublevel", &sublevel);
-  
-  
-    tree->SetBranchAddress("r", &r );
-    tree->SetBranchAddress("dr",&dr);
-  
-    tree->SetBranchAddress("phi", &phi );
-    tree->SetBranchAddress("dphi", &dphi );
-  
-    */
+
     TString varx;
     TString vary;
     int numbin = -1;
@@ -198,129 +160,6 @@ void bastelplot() {
    
   
   
-  
-  // tree->Draw("dr:r","level ==1 && sublevel==1"); 
-
-  
-  /*
-  for(int iE = 0; iE < tree->GetEntries(); ++iE) { //Histogramm nur mit Eintraegen vom PXB fuellen
-    tree->GetEntry(iE);
-    if( level != 1 || sublevel != 1) continue;
-    hist->Fill(dr);
-  }
-  
-  */
-  
-  
-  
-  
-  
-  
-  
-  
- 
-  // DR : R Diagramm Abweichung Anfang
-  
-  /*
-  
-  
-  
-  double arr[5] = {2 , 6 , 10 , 15, 20};
-  int count = 0;
-  
-  for(int i = 0; i<4; i++){
-      count++;
-      for(int iE = 0; iE <  tree->GetEntries();++iE ){
-          tree->GetEntry(iE);
-          if(level!=1 || sublevel!=1 || r < arr[i] || r > (arr[i+1])) continue;
-          if(i==0) hist->Fill(dr);
-          else if(i ==1)  hist1->Fill(dr);
-          else if(i ==2)  hist2->Fill(dr);
-          else if(i ==3)  hist3->Fill(dr);
-    }
-    if(i==0)      std::cout  << "Std Dev Part " << i+1 << " : " << hist->GetRMS(1) << std::endl;
-    else if(i==1) std::cout  << "Std Dev Part " << i+1 << " : " << hist1->GetRMS(1) << std::endl;
-    else if(i==2) std::cout  << "Std Dev Part " << i+1 << " : " << hist2->GetRMS(1) << std::endl;
-    else if(i==3) std::cout  << "Std Dev Part " << i+1 << " : " << hist3->GetRMS(1) << std::endl;
-        
-    
-    
-  }
-  
-  std::cout << count << "is count" << endl;
-  
-  
-  
-  hist->SetLineColor(1);
-  hist1->SetLineColor(2);
-  hist2->SetLineColor(3);
-  hist3->SetLineColor(4);
-  
-  
-  hist3->Draw();
-  hist->Draw("same");
-  hist1->Draw("same");
-  hist2->Draw("same");
-  
-  // DR : R Histogramm Ende
-  
-  
-  */
-  
-  
-  
-  
-  // DR : Phi Histogramm Anfang
-  
-  
-  
-  /*
-  
-  double  pye = 3.14;
-  double arphi[5] = {-pye , -pye/2 , 0. , pye/2, pye};
-  
-  for(int i = 0; i<4; i++){
-    for(int iE = 0; iE <  tree->GetEntries();++iE ){
-      tree->GetEntry(iE);
-      if(level!=1 || sublevel!=1 || phi < arphi[i] || phi > (arphi[i+1])) continue;
-      if(i==0) 
-          hist->Fill(dr);
-      else if(i ==1)  
-          hist1->Fill(dr);
-      else if(i ==2)  
-          hist2->Fill(dr);
-      else if(i ==3)  
-          hist3->Fill(dr);
-    }
-    
-    if(i==0)      
-        std::cout  << "Std Dev Part " << i+1 << " : " << hist->GetRMS(1) << std::endl;
-    else if(i==1) 
-        std::cout  << "Std Dev Part " << i+1 << " : " << hist1->GetRMS(1) << std::endl;
-    else if(i==2) 
-        std::cout  << "Std Dev Part " << i+1 << " : " << hist2->GetRMS(1) << std::endl;
-    else if(i==3) 
-        std::cout  << "Std Dev Part " << i+1 << " : " << hist3->GetRMS(1) << std::endl;
-        
-  }
-  
-  
-  
-  hist->SetLineColor(1);
-  hist1->SetLineColor(2);
-  hist2->SetLineColor(3);
-  hist3->SetLineColor(4);
-  
-  
-  hist->Draw();
-  hist1->Draw("same");
-  hist2->Draw("same");
-  hist3->Draw("same");
-  
-  */
-  
-  
-  // DR : Phi Histogramm Ende
   
   
   
